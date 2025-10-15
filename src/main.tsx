@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
 import SearchBooks from "./search-books.tsx";
+import ViewBooks from "./view-books.tsx";
 import { RouterProvider, createBrowserRouter } from "react-router";
 
 const router = createBrowserRouter([
@@ -11,7 +12,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <h1 className="text-3xl text-center">Välkommen</h1>,
+        element: <h1 className="text-3xl text-center">Welcome</h1>,
       },
       {
         path: "search",
@@ -19,7 +20,7 @@ const router = createBrowserRouter([
       },
       {
         path: "view-books",
-        element: <h1 className="text-3xl text-center">View Books</h1>,
+        Component: ViewBooks,
       },
       {
         path: "*",

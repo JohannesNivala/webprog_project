@@ -1,30 +1,27 @@
+import { v4 as uuidv4 } from "uuid";
+
 class Book {
   public title: string;
   public author: string;
   public year: string;
-  public pages: string;
-  public publisher: string;
-  public ISBN: string;
-  public language: string;
+  public languages: string[];
   public cover_id: string;
+  public id: string;
 
   constructor(
     title: string,
     author: string,
     year: string,
-    pages: string,
-    publisher: string,
-    ISBN: string,
-    language: string,
+    languages: string[],
     cover_id: string
   ) {
     this.title = title;
     this.author = author;
     this.year = year;
-    this.pages = pages;
-    this.publisher = publisher;
-    this.ISBN = ISBN;
-    this.language = language;
+    this.languages = languages;
     this.cover_id = cover_id;
+    this.id = uuidv4();
   }
 }
+
+export default Book;
