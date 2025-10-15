@@ -6,6 +6,6 @@
 
 The program consists of three tabs/pages; Home, Search, View Books.
 To use the program, go to the Search tab and input atleast a titel, author, character or ISBN and a language filter if you want to.
-Press search or Enter to search and you will be taken to the View Books tab and can see the top 100 results with their title, author, publishing year, written languages and the coved if it exists.
+Press search or Enter to search and you will be taken to the View Books tab and can see the top 100 results with their title, author, publishing year, written languages and the cover if it exists.
 
 That is the entire program! Hope you can find your favorite book :)
