@@ -1,12 +1,11 @@
 import {
   Card,
-  CardAction,
   CardContent,
   CardDescription,
   CardHeader,
   CardTitle,
 } from "./components/ui/card";
-import { useOutletContext, useParams } from "react-router";
+import { useOutletContext } from "react-router";
 import Book from "./book";
 import { Label } from "@radix-ui/react-label";
 
@@ -43,7 +42,7 @@ function ViewBooks() {
       </div>
     );
   } else {
-    return <Label>No books found :(</Label>;
+    return <Label>No books found, try to search for something else.</Label>;
   }
 }
 

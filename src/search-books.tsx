@@ -1,13 +1,7 @@
 import { Button } from "./components/ui/button";
 import { useState, type FormEvent } from "react";
 import { AlertCircleIcon } from "lucide-react";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "./components/ui/card";
+import { Card } from "./components/ui/card";
 import { Label } from "./components/ui/label";
 import { useOutletContext, useNavigate } from "react-router";
 import { Alert, AlertTitle } from "./components/ui/alert";
@@ -76,7 +70,6 @@ function SearchBooks() {
           }
           setHasSubmittedEmpty(false);
           var data = await getBooks(title, author, character, isbn, language);
-          console.log(data);
 
           let i = 0;
           let books: Book[] = [];
@@ -96,7 +89,6 @@ function SearchBooks() {
             }
           }
           setBooks(books);
-          console.log(books);
           navigate("/view-books");
         }}
       >
@@ -126,7 +118,9 @@ function SearchBooks() {
             setHasSubmittedEmpty={setHasSubmittedEmpty}
           ></SelectText>
           <Label className="flex items-center justify-center flex-col gap-3">
-            <span className="text-base font-semibold -mb-1">Language</span>
+            <span className="text-base font-semibold -mb-1">
+              Language filter
+            </span>
             <Select
               name="language"
               value={language}
@@ -146,10 +140,10 @@ function SearchBooks() {
           </Label>
         </div>
         {HasSubmittedEmpty && !language && (
-          <ErrorBox errorString="Please fill in atleast one"></ErrorBox>
+          <ErrorBox errorString="Please fill in atleast one of the text fields (Titel, Author, Character and/or ISBN)."></ErrorBox>
         )}
         {HasSubmittedEmpty && language && (
-          <ErrorBox errorString="Can't only search with language"></ErrorBox>
+          <ErrorBox errorString="Can't only search with a language filter."></ErrorBox>
         )}
         <Button type="submit" className="float-right">
           Search

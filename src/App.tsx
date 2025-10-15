@@ -1,14 +1,9 @@
 import "./App.css";
-import { Button } from "./components/ui/button";
 import {
   NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 import { Link, Outlet } from "react-router";
 import { useState } from "react";

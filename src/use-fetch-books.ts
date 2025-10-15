@@ -1,5 +1,3 @@
-import type { C } from "node_modules/react-router/dist/development/index-react-server-client-2EDmGlsZ.d.mts";
-
 const url = "https://openlibrary.org/search.json?";
 async function getBooks(
   title?: string,
